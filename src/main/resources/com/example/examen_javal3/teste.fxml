@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<GridPane prefHeight="700" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examen_javal3.Controller.AfficheVente">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="50" />
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="50" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS" />
+    </rowConstraints>
+    <children>
+        <AnchorPane style="-fx-background-color: #73C2FB;" styleClass="right-form" GridPane.columnIndex="1">
+            <children>
+                <Label fx:id="errorLabel" layoutX="48.0" layoutY="502.0" prefHeight="25.0" prefWidth="538.0" style="-fx-background-color: transparent;" textFill="red">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <VBox layoutY="66.0" prefHeight="289.0" prefWidth="600.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <TableView fx:id="produitsTable" prefHeight="230.0" prefWidth="599.0">
+                            <columns>
+                                <TableColumn fx:id="produitNom" prefWidth="182.6666259765625" text="Nom">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="nom" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="produitPrix" prefWidth="207.33331298828125" text="Prix de vente">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="prixVente" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="produitQuantite" prefWidth="208.66668701171875" text="Stock">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="quantite" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+                <VBox layoutX="34.0" layoutY="432.0" prefHeight="244.0" prefWidth="598.0" stylesheets="@dashboardDesign.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <TableView fx:id="produitselectionner" prefHeight="306.0" prefWidth="599.0" styleClass="column-header-background" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn prefWidth="193.99993896484375" text="Nom">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="nom" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="213.3333740234375" text="Prix unitaire">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="prixVente" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="190.00002034505212" text="Quantité">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="quantite" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+                <Label alignment="CENTER" layoutX="105.0" layoutY="39.0" prefHeight="30.0" prefWidth="372.0" styleClass="leslabel" stylesheets="@dashboardDesign.css" text="Produits disponibles:" textAlignment="CENTER">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8333333134651184" green="0.22427983582019806" blue="0.07201646268367767" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.13420329988002777" green="0.027994368225336075" blue="0.8245614171028137" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+                </Label>
+                <Label alignment="CENTER" layoutX="114.0" layoutY="378.0" prefHeight="30.0" prefWidth="372.0" styleClass="leslabel" stylesheets="@dashboardDesign.css" text="Panier">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8333333134651184" green="0.22427983582019806" blue="0.07201646268367767" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.13420329988002777" green="0.027994368225336075" blue="0.8245614171028137" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="439.0" prefWidth="329.0" style="-fx-background-color: #73C2FB;" styleClass="left-form">
+            <children>
+                <ComboBox fx:id="clientbox" layoutX="184.0" layoutY="175.0" prefHeight="39.0" prefWidth="231.0" promptText="Selectionner un client " />
+                <Label alignment="CENTER" layoutX="13.0" layoutY="175.0" prefHeight="39.0" prefWidth="149.0" styleClass="leslabel" stylesheets="@dashboardDesign.css" text="Client:">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="20.0" />
+                    </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8333333134651184" green="0.22427983582019806" blue="0.07201646268367767" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.13420329988002777" green="0.027994368225336075" blue="0.8245614171028137" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+                </Label>
+                <Button layoutX="427.0" layoutY="309.0" onAction="#ajouterProduit" prefHeight="38.0" prefWidth="152.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Ajout Panier">
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Label alignment="CENTER" layoutX="13.0" layoutY="308.0" prefHeight="39.0" prefWidth="149.0" styleClass="leslabel" stylesheets="@dashboardDesign.css" text="Quantité:">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="20.0" />
+                    </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8333333134651184" green="0.22427983582019806" blue="0.07201646268367767" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.13420329988002777" green="0.027994368225336075" blue="0.8245614171028137" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+                </Label>
+                <TextField fx:id="txtquantite" layoutX="184.0" layoutY="308.0" prefHeight="39.0" prefWidth="231.0" />
+                <Label alignment="CENTER" layoutX="88.0" layoutY="409.0" prefHeight="39.0" prefWidth="179.0" styleClass="leslabel" stylesheets="@dashboardDesign.css" text="Total:">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="20.0" />
+                    </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8333333134651184" green="0.22427983582019806" blue="0.07201646268367767" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.13420329988002777" green="0.027994368225336075" blue="0.8245614171028137" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+                </Label>
+                <Label fx:id="totalvente" alignment="CENTER" layoutX="272.0" layoutY="410.0" prefHeight="39.0" prefWidth="187.0" styleClass="label-info" stylesheets="@dashboardDesign.css" text="00">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Button layoutX="154.0" layoutY="515.0" onAction="#enregistrerVente" prefHeight="47.0" prefWidth="152.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Enregistre Vente">
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button layoutX="324.0" layoutY="514.0" onAction="#effacer" prefHeight="47.0" prefWidth="152.0" style="-fx-background-color: red;" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Effacer">
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Button>
+            <Button layoutX="14.0" layoutY="666.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: green;" styleClass="shadow" stylesheets="@dashboardDesign.css" text="Retour" textFill="#b4f2ab" />
+            <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="16.0" layoutY="667.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/log-out_4113725.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>

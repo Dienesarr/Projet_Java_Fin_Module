@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examen_javal3.Controller.AgentController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="43.0" prefWidth="1100.0" style="-fx-background-color: #73C2FB;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="23.0" layoutY="-77.0" prefHeight="32.0" prefWidth="1100.0" style="-fx-background-color: #73C2FB; -fx-border-radius: 8px;" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="52.0" layoutY="14.0" text="GESTION ">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="16.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/management_7372998.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="555.0" prefWidth="211.0" styleClass="nav-form" stylesheets="@dashboardDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="6.0" layoutY="60.0" prefHeight="554.6666666666666" prefWidth="211.33333333333334" style="-fx-background-color: #73C2FB;" styleClass="nav-form" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="45.0" layoutY="126.0" text="Bienvenu, ">
+                                 <font>
+                                    <Font name="Tahoma" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="21.0" layoutY="154.0" prefHeight="23.0" prefWidth="149.0" text="Agent">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.33487653732299805" green="0.8333333134651184" blue="0.3086419701576233" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.7017543911933899" green="0.44834306836128235" blue="0.44834306836128235" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Line endX="83.99998474121094" layoutX="105.0" layoutY="188.0" startX="-84.66666412353516" />
+                              <Button layoutX="8.0" layoutY="222.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: #73C2FB;" text="Accueil">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="481.0" mnemonicParsing="false" onAction="#Deconnexion" prefHeight="32.0" prefWidth="121.0" style="-fx-background-color: #73C2FB;" text="Deconnexion" AnchorPane.bottomAnchor="10.66" />
+                              <ImageView fitHeight="78.0" fitWidth="82.0" layoutX="55.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/9131529.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="21.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/square_14034325.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="7.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.66">
+                                 <image>
+                                    <Image url="@img/log-out_4113725.png" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="32.0" layoutY="266.0" mnemonicParsing="false" onAction="#affichevente" prefHeight="35.0" prefWidth="121.0" style="-fx-background-color: #73C2FB;" text="Gestion ventes">
+                                 <font>
+                                    <Font name="Tahoma" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="19.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/management_7372998.png" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="36.0" layoutY="310.0" mnemonicParsing="false" onAction="#stock" prefHeight="35.0" prefWidth="136.0" style="-fx-background-color: #73C2FB;" text="Consultation Stocks">
+                                 <font>
+                                    <Font name="Tahoma" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="20.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/presentation_6901163.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="546.0" prefWidth="889.0" style="-fx-background-color: #DFF2FF;" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="11.333333333333334" layoutY="11.333333333333334" prefHeight="527.0" prefWidth="867.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="11.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="-0.6666666666666666" layoutY="-2.6666666666666665" prefHeight="163.0" prefWidth="869.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="398.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-3.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AnchorPane layoutX="23.0" layoutY="2.0" prefHeight="121.0" prefWidth="205.0" style="-fx-background-color: #73C2FB;" stylesheets="@dashboardDesign.css">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="card" />
+                                             </styleClass>
+                                             <children>
+                                                <Label layoutX="4.0" layoutY="83.0" prefHeight="25.0" prefWidth="151.0" text="Total Produits en Stock">
+                                                   <textFill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7105262875556946" green="0.2214912325143814" blue="0.2214912325143814" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="0.4227050244808197" green="0.859649121761322" blue="0.22021876275539398" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </textFill>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="11.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@img/product-development_8787115.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="stockTotal" alignment="CENTER" layoutX="128.0" layoutY="23.0" prefHeight="40.0" prefWidth="53.0" textFill="#f2d9d9ed">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="313.0" layoutY="2.0" prefHeight="122.0" prefWidth="227.0" style="-fx-background-color: #73C2FB;" stylesheets="@dashboardDesign.css">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="card" />
+                                             </styleClass>
+                                             <children>
+                                                <Label fx:id="ventedujour" layoutX="16.0" layoutY="32.0" prefHeight="44.0" prefWidth="207.0" style="-fx-text-fill: white; -fx-font-size: 24; -fx-font-weight: bold;" />
+                                                <Label layoutX="12.0" layoutY="84.0" prefHeight="25.0" prefWidth="151.0" text="Vente Sur La Journée">
+                                                   <textFill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7105262875556946" green="0.2214912325143814" blue="0.2214912325143814" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="0.4227050244808197" green="0.859649121761322" blue="0.22021876275539398" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </textFill>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="11.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@img/analysis_6218370.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox alignment="TOP_CENTER" layoutX="620.0" layoutY="6.0" prefHeight="121.0" prefWidth="214.0" spacing="5" style="-fx-background-radius: 10; -fx-background-color: #73C2FB;" stylesheets="@dashboardDesign.css">
+                                             <children>
+                                                <Label prefHeight="25.0" prefWidth="164.0" text="Produits En Faible Quantité">
+                                                   <textFill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7105262875556946" green="0.2214912325143814" blue="0.2214912325143814" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="0.4227050244808197" green="0.859649121761322" blue="0.22021876275539398" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </textFill>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TableView fx:id="tblstockfaible" prefHeight="123.0" prefWidth="240.0" style="-fx-background-color: #73C2FB;" styleClass="card" stylesheets="@dashboardDesign.css">
+                                                   <columns>
+                                                      <TableColumn fx:id="produit" prefWidth="64.00009155273438" style="-fx-background-color: #73C2FB;" text="Produit" />
+                                                      <TableColumn fx:id="reference" prefWidth="70.666748046875" style="-fx-background-color: #73C2FB;" text="Reference" />
+                                                      <TableColumn fx:id="quantite" prefWidth="76.66656494140625" style="-fx-background-color: #73C2FB;" text="Quantité" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <BarChart fx:id="graphvente" layoutX="-8.0" layoutY="163.33333333333334" prefHeight="385.0" prefWidth="875.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="163.0">
+                                       <xAxis>
+                                          <CategoryAxis fx:id="axeX" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis fx:id="axeY" side="LEFT" />
+                                       </yAxis>
+                                    </BarChart>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

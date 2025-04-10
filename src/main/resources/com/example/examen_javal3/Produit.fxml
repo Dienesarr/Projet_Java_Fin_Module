@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examen_javal3.Controller.ProduitController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="555.0" prefWidth="211.0" stylesheets="@dashboardDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="-2.0" prefHeight="543.0" prefWidth="227.0" style="-fx-background-color: #73C2FB;" styleClass="nav-form" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="32.0" layoutY="305.0" prefHeight="111.0" prefWidth="112.0" styleClass="white-bg">
+                                 <children>
+                                    <VBox layoutY="3.0">
+                                       <children>
+                                          <ImageView fx:id="img" fitHeight="102.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="45.0" layoutY="126.0" text="Bienvenu, ">
+                                 <font>
+                                    <Font name="Tahoma" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="21.0" layoutY="154.0" prefHeight="23.0" prefWidth="149.0" text="Admin">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.33487653732299805" green="0.8333333134651184" blue="0.3086419701576233" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.7017543911933899" green="0.44834306836128235" blue="0.44834306836128235" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Line endX="83.99998474121094" layoutX="105.0" layoutY="188.0" startX="-84.66666412353516" />
+                              <Button layoutX="37.0" layoutY="219.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: #73C2FB;" text="Produits">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="32.0" layoutY="506.6666666666667" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: green;" styleClass="shadow" stylesheets="@dashboardDesign.css" text="Retour" textFill="#b4f2ab" AnchorPane.bottomAnchor="10.666666666666629" />
+                              <ImageView fitHeight="78.0" fitWidth="82.0" layoutX="55.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/9131529.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="50.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/produit.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="7.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0">
+                                 <image>
+                                    <Image url="@img/log-out_4113725.png" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="32.0" layoutY="403.0" mnemonicParsing="false" onAction="#importerImage" prefHeight="25.0" prefWidth="112.0" text="IMPORTER">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="logout" />
+                                 </styleClass>
+                              </Button>
+                              <Label layoutX="77.0" layoutY="271.0" text="Image" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="546.0" prefWidth="889.0" style="-fx-background-color: #DFF2FF;" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="2.0" layoutY="11.333333333333334" prefHeight="523.0" prefWidth="877.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="11.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="tblprod" layoutX="376.0" layoutY="3.3333333333333335" prefHeight="518.0" prefWidth="526.0" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="3.0">
+                                      <columns>
+                                        <TableColumn fx:id="clid" prefWidth="66.66668570041656" text="ID" />
+                                        <TableColumn fx:id="clnom" prefWidth="54.000003814697266" text="NOM" />
+                                          <TableColumn fx:id="clreference" prefWidth="73.99996185302734" text="REFERENCE" />
+                                          <TableColumn fx:id="clprix_achat" minWidth="6.0" prefWidth="66.00001525878906" text="PRIX_ACHAT" />
+                                          <TableColumn fx:id="clprix_vente" minWidth="0.0" prefWidth="62.66668701171875" text="PRIX_VENTE" />
+                                          <TableColumn fx:id="clstock" prefWidth="54.6666259765625" text="STOCK" />
+                                          <TableColumn fx:id="clcategorie" prefWidth="76.66668701171875" text="CATEGORIES" />
+                                          <TableColumn fx:id="climage" prefWidth="87.99984741210938" text="IMAGE" />
+                                      </columns>
+                                    </TableView>
+                                    <AnchorPane layoutX="6.0" layoutY="11.333333333333334" prefHeight="510.0" prefWidth="335.0" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="536.0" AnchorPane.topAnchor="11.0">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="136.0" layoutY="12.0" prefHeight="20.0" prefWidth="53.0" styleClass="shadow" stylesheets="@dashboardDesign.css" text="NOM :" AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="0.45098039507865906" green="0.6470588445663452" blue="0.9803921580314636" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="0.7105262875556946" green="0.035087719559669495" blue="0.32777777314186096" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <TextField fx:id="txtnom" layoutX="87.0" layoutY="39.0" promptText="Donner le nom du produit" AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329" />
+                                          <Label layoutX="126.0" layoutY="76.0" prefHeight="20.0" prefWidth="96.0" styleClass="shadow" stylesheets="@dashboardDesign.css" text="REFERENCE" AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="0.45098039507865906" green="0.6470588445663452" blue="0.9803921580314636" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="0.7105262875556946" green="0.035087719559669495" blue="0.32777777314186096" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <TextField fx:id="txtreference" layoutX="91.0" layoutY="99.0" promptText="Donner la ref... du produit" AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329" />
+                                          <Label layoutX="119.0" layoutY="137.0" prefHeight="20.0" prefWidth="102.0" styleClass="shadow" stylesheets="@dashboardDesign.css" text="PRIX_ACHAT" AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="0.45098039507865906" green="0.6470588445663452" blue="0.9803921580314636" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="0.7105262875556946" green="0.035087719559669495" blue="0.32777777314186096" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <TextField fx:id="txtprix_achat" layoutX="92.0" layoutY="163.0" promptText="Donner le prix d'achat " AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329" />
+                                          <Button layoutX="31.0" layoutY="402.0" mnemonicParsing="false" onAction="#Ajoutprod" prefHeight="31.0" prefWidth="108.0" stylesheets="@dashboardDesign.css" text="AJOUTER" AnchorPane.leftAnchor="31.0">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="add-btn" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button layoutX="171.0" layoutY="402.0" mnemonicParsing="false" onAction="#modifierProduit" prefHeight="31.0" prefWidth="116.0" stylesheets="@dashboardDesign.css" text="MODIFIER" AnchorPane.rightAnchor="5.0">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="update-btn" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button layoutX="118.0" layoutY="454.0" mnemonicParsing="false" onAction="#supprimerProduit" prefHeight="31.0" prefWidth="108.0" stylesheets="@dashboardDesign.css" text="SUPPRIMER" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="108.66666666666663">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="clear-btn" />
+                                             </styleClass>
+                                          </Button>
+                                          <Label layoutX="120.0" layoutY="198.0" prefHeight="20.0" prefWidth="82.0" styleClass="shadow" stylesheets="@dashboardDesign.css" text="PRIX_VENTE" AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="0.45098039507865906" green="0.6470588445663452" blue="0.9803921580314636" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="0.7105262875556946" green="0.035087719559669495" blue="0.32777777314186096" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <TextField fx:id="txtprix_vente" layoutX="95.0" layoutY="225.0" promptText="Donner le prix de vente" AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329" />
+                                          <Label layoutX="125.0" layoutY="262.0" prefHeight="20.0" prefWidth="112.0" styleClass="shadow" stylesheets="@dashboardDesign.css" text="STOCK" AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="0.45098039507865906" green="0.6470588445663452" blue="0.9803921580314636" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="0.7105262875556946" green="0.035087719559669495" blue="0.32777777314186096" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <TextField fx:id="txtstock" layoutX="96.0" layoutY="288.0" promptText="Donner le stock" AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329" />
+                                          <Label layoutX="126.0" layoutY="326.0" prefHeight="20.0" prefWidth="112.0" styleClass="shadow" stylesheets="@dashboardDesign.css" text="ID_CATEGORIE" AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="0.45098039507865906" green="0.6470588445663452" blue="0.9803921580314636" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="0.7105262875556946" green="0.035087719559669495" blue="0.32777777314186096" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <ComboBox fx:id="txtid_categorie" layoutX="99.0" layoutY="355.0" prefWidth="150.0" promptText="choisissez un ID" AnchorPane.leftAnchor="95.99999999999997" AnchorPane.rightAnchor="89.33333333333329" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <top>
+                  <AnchorPane prefHeight="43.0" prefWidth="1100.0" style="-fx-background-color: #73C2FB;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="23.0" layoutY="-77.0" prefHeight="32.0" prefWidth="1100.0" style="-fx-background-color: #73C2FB; -fx-border-radius: 8px;" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="52.0" layoutY="14.0" text="PAGE PRODUITS">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="16.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/users_9506058.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
